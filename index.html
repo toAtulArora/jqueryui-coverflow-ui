@@ -47,6 +47,13 @@
 						setTimeout(function(){							
 							loading.hide();
 							wrapper.css({overflow: 'hidden'});						
+							
+/*
+perspective:150;
+perspective-origin: 10% 10%;
+-webkit-perspective:150;
+-webkit-perspective-origin: 10% 10%;
+*/
 							scrollable.slideDown('slow', function(){
 								enable();	
 							});					
@@ -86,16 +93,22 @@
 	
 
 </head>
-<body>
+<body style="overflow:hidden">
 
+<!-- 
+							wrapper.css({'perspective': '150'});
+							wrapper.css({'perspective-origin': '50% 50%'});
+							wrapper.css({'-webkit-perspective': '150'});
+							wrapper.css({'-webkit-perspective-origin': '50% 50%'});
 
+-->
 
 <div class="pageWrapper">
 	<h1>jQuery UI CSS3 CoverFlow 2.2 (Preview)</h1>
 	<div class="demo">
 
-		<div class="wrapper">
-			<div id="coverflow">
+		<div class="wrapper" style="-webkit-perspective: 1400; -webkit-perspective-origin: 50% 50%;">
+			<div id="coverflow" >
 	            <img src="img/gorillaz-plasticbeach.jpg" data-artist="Gorillaz" data-album="Plastic Beach"/>
 				<img src="img/kingsofleon-comearoundsunshine.jpg" data-artist="Kings Of Leon" data-album="Come Around Sunshine"/>
 				<img src="img/kidrock-bornfree.jpg" data-artist="Kid Rock" data-album="Born Free"/>		
